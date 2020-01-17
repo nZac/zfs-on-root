@@ -20,6 +20,21 @@ Live Env Steps
 3. Connect to WiFi
 4. `sudo sh live-env-prep.sh`
 
+
+From Live CD
+------------
+
+1. Boot into the Desktop installer, choosing to "Try Ubuntu"
+1. Update the package list: `apt update`
+1. Open a terminal and install git: `sudo apt install -y git`
+1. Clone this repo: `git clone https://github.com/rsyring/zfs-on-root`
+1. `cd zfs-on-root && chmod +x ./live-env-prep.sh ./zor.py`
+1. `sudo ./live-env-prep.sh`
+1. Run `ls -la /dev/disk/by-id` and find the disk you want to use
+1. Add the disk id to the zor-config.ini file and adjust the other values
+   appropriately
+
+
 Usage Steps
 -----------
 
